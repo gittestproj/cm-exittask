@@ -1,0 +1,11 @@
+<Context>
+<Resource name="jdbc/ConnDB"
+auth="Container"
+type="javax.sql.DataSource"
+username="user"
+password="pass"
+driverClassName="com.mysql.jdbc.Driver"
+url="jdbc:mysql://127.0.0.1:3306/app_test"
+maxActive="15"
+maxIdle="3"/>
+</Context>

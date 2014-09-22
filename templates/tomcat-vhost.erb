@@ -1,0 +1,7 @@
+<IfModule mod_proxy.c>
+NameVirtualHost *
+<VirtualHost *:80>
+DocumentRoot /tmp
+ProxyPass / http://192.168.3.200:8080/
+</VirtualHost>
+</IfModule>
