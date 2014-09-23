@@ -1,10 +1,18 @@
 class exittask {
 
 class {'connect_repos': }
-class {'install_java': }
-class {'install_tomcat': }
-class {'install_apache': }
-class {'install_mysql': }
+class {'install_java': 
+require => Class["connect_repos"]
+}
+class {'install_tomcat': 
+require => Class["connect_repos"]
+}
+class {'install_apache': 
+require => Class["connect_repos"]
+}
+class {'install_mysql': 
+require => Class["connect_repos"]
+}
 class {'configure_apache': 
 require => Class["install_apache"]
 }
