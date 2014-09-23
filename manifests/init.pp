@@ -14,5 +14,7 @@ require => Class["install_tomcat"]
 class {'configure_mysql': 
 require => Class["install_mysql"]
 }
-class {'app_deploy': }
+class {'app_deploy': 
+require => Class["install_tomcat"]
+}
 }

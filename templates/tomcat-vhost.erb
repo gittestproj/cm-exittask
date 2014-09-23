@@ -2,6 +2,14 @@
 NameVirtualHost *
 <VirtualHost *:80>
 DocumentRoot /tmp
-ProxyPass / http://192.168.3.200:8080/
+ProxyPass / http://192.168.3.200:8080/app_test/
 </VirtualHost>
+
+<VirtualHost *:80>
+DocumentRoot /tmp
+ProxyPass /dbread/ http://192.168.3.200:8080/app_test/dbread/
+ProxyPassReverse /dbread/ http://192.168.3.200:8080/app_test/dbread/
+</VirtualHost>
+
 </IfModule>
+
