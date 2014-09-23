@@ -4,6 +4,7 @@ class {'connect_repos': }
 class {'install_java': }
 class {'install_tomcat': }
 class {'install_apache': }
+class {'install_mysql': }
 class {'configure_apache': }
 class {'configure_tomcat': }
 class {'configure_mysql': }
