@@ -1,10 +1,10 @@
 class install_mysql{
 
-package {'mysql':
+package {'mysql-server':
 ensure => 'installed'
 }
 
-service {'mysql':
+service {'mysqld':
 ensure => 'running',
 enable => true,
 }
