@@ -2,7 +2,7 @@ class configure_mysql {
 
 exec {'download_dump':
 command => '/usr/bin/wget --no-check-certificate https://raw.githubusercontent.com/rightscale/examples/unified_application/common/sql/app_test.sql',
-cwd => '/tmp'
+cwd => '/tmp',
 notify => exec['apply_dump']
 }
 
